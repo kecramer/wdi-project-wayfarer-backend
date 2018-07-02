@@ -19,3 +19,10 @@ exports.show = function (req, res) {
       res.json(post)
     })
 }
+
+exports.create = function (req, res) {
+  db.Post.create(req.body, function (err, newPost) {
+    if (err) { console.log(err) }
+    res.json(newPost)
+  })
+}

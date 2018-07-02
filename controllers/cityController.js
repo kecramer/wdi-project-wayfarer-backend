@@ -24,3 +24,10 @@ exports.show = function (req, res) {
     res.json(city)
   })
 }
+
+exports.create = function (req, res) {
+  db.City.create(req.body, function (err, newCity) {
+    if (err) { console.log(err) }
+    res.json(newCity)
+  })
+}

@@ -14,8 +14,10 @@ module.exports = function (app) {
   app.post('/signin', requireSignIn, controller.auth.signin);
   app.get('/city', controller.city.index );
   app.get('/city/:id', controller.city.show);
+  app.post('/city', controller.city.create);
   app.get('/user', controller.user.index);
   app.get('/user/:id', controller.user.show);
   app.get('/post', controller.post.index);
   app.get('/post/:id', controller.post.show);
+  app.post('/post', controller.post.create);
 }
