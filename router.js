@@ -16,4 +16,6 @@ module.exports = function (app) {
   app.get('/city/:id', controller.city.show);
   app.get('/user', controller.user.index);
   app.get('/user/:id', controller.user.show);
+  app.get('/post', controller.post.index);
+  app.get('/post/:id', controller.post.show);
 }
