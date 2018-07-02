@@ -4,5 +4,5 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/project-wayfare
 module.exports = {
   City: require('./city.js'),
   Post: require('./post.js'),
-  User: require('./user.js'),
+  User: require('./user.js')
 };
