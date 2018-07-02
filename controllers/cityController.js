@@ -3,14 +3,16 @@ const bodyParser = require('body-parser');
 const app = express();
 const db = require('../models/');
 
-const index = (req, res) => {
-  db.City.find({})
-    .populate('posts')
-    .exec(err, cities) => {
-      if (err) { console.log(err) }
-      console.log(json.stringify(cities))
-      res.json(cities)
-    }
-  }
+exports.index = (req, res) => {
+  db.City.find({}, (err, cities) => {
+    if (err) { console.log(err) }
+    res.json(cities)
+  })
+}
 
-module.exports = index
+exports.show = (req, res) => {
+  let id = req.params.id
+  db.City.findById(id, (err, city) => {
+    res.json(city)
+  })
+}
