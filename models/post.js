@@ -6,11 +6,11 @@ const PostSchema = new Schema({
   body: String,
   author: {
     type: Schema.Types.ObjectId,
-    ref: 'userSchema'
+    ref: 'User'
   },
   city: {
     type: Schema.Types.ObjectId,
-    ref: 'citySchema'
+    ref: 'City'
   },
   created: Date,
 })

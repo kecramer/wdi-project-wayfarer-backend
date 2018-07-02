@@ -10,7 +10,7 @@ const UserSchema = new Schema({
   profile_picture: String,
   posts: [{
     type: Schema.Types.ObjectId,
-    ref: 'postSchema'
+    ref: 'Post'
   }],
   current_city: String
 });
