@@ -6,7 +6,7 @@ const CitySchema = new Schema({
   thumbnail: String,
   posts: [{
     type: Schema.Types.ObjectId,
-    ref: 'postSchema'
+    ref: 'Post'
   }]
 })
 
